@@ -403,8 +403,8 @@ section {
 .marquee-box {
   display: flex;
   align-items: center;
-  width: 200%;
-  height: 100%;
+  width: 240%;
+  height: 120%;
   position: absolute;
   overflow: hidden;
   animation: marquee 60s linear infinite;
