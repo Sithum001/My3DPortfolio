@@ -422,7 +422,7 @@ section {
 }
 /* marquee end */
 
-.card {
+.card{
   --start: 0;
   position: relative;
   z-index: 40;
@@ -455,7 +455,7 @@ section {
   transition: 0.5s ease;
 }
 
-.glow {
+.glow{
   pointer-events: none;
   position: absolute;
   width: 100%;
@@ -465,6 +465,7 @@ section {
   transform: translate(-50%, -50%);
   filter: blur(10px);
   filter: saturate(200);
+  
 }
 
 .card:hover::before {
