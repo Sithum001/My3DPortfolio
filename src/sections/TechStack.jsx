@@ -30,7 +30,7 @@ const TechStack = () => {
     <div id="skills" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader title="Tech Stack" sub="🤝 The Skills " />
-        <div className="tech-grid">
+        <div className="tech-grid `g " >
           {techStackIcons.map((icon) => (
             <div
               key={icon.name}
@@ -47,6 +47,9 @@ const TechStack = () => {
               </div>
             </div>
           ))}
+          {
+
+          }
         </div>
       </div>
     </div>
