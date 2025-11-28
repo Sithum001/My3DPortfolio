@@ -1,6 +1,7 @@
 import React from 'react'
-import { navLinks } from '../constants'
+import { navLinks, socialLinks } from '../constants'
 import { useEffect,useState } from 'react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Navbar = () => {
     const[scrolled,setScrolled] =useState(false);
@@ -33,11 +34,33 @@ const Navbar = () => {
                 ))}
              </ul>
         </nav>
-        <a href="#contact" className='contact-btn group'>
-            <div className='inner'>
-                <span>Contact Me</span>
+        
+        <div className='flex items-center gap-4'>
+            <div className='flex items-center gap-3'>
+                {socialLinks.map(({ name, url, icon }) => (
+                    <a
+                        key={name}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className='text-white hover:text-blue-400 transition-colors duration-300'
+                        aria-label={name}
+                    >
+                        {icon === 'github' ? (
+                            <FaGithub size={24} />
+                        ) : (
+                            <FaLinkedin size={24} />
+                        )}
+                    </a>
+                ))}
             </div>
-        </a>
+            
+            <a href="#contact" className='contact-btn group'>
+                <div className='inner'>
+                    <span>Contact Me</span>
+                </div>
+            </a>
+        </div>
     </div>
   </header>
   )

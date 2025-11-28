@@ -22,6 +22,15 @@ const Hero = () => {
         );
     }, []);
 
+    const handleDownloadCV = () => {
+        const link = document.createElement('a');
+        link.href = '/CV.pdf';
+        link.download = 'Sithum_Gimhana_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <section id="hero" className="relative overflow-hidden">
             <div className="absolute top-0 left-1 z-10">
@@ -31,8 +40,12 @@ const Hero = () => {
                 <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
-                            <h1>
-                                Shaping
+                         
+                            <h1>Hi! I'am</h1>
+                            <h1>Sithum Gimhana</h1>
+                            
+                               <h1>
+                                I'am a
                                 <span className="slide">
                                     <span className="wrapper">
                                         {words.map((word) => (
@@ -51,16 +64,21 @@ const Hero = () => {
                                     </span>
                                 </span>
                             </h1>
-                            <h1>into Real Projects</h1>
-                            <h1>that Deliver Results</h1>
-                            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                                Hi, I’m Sithum, a developer
+                            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none md:w-1/2">
+                               I have a strong background in web development, with a focus on creating dynamic and responsive user interfaces. My passion for coding drives me to continuously learn and adapt to new technologies, ensuring that I stay at the forefront of the industry and consistently deliver high-quality, user-centered digital solutions.
                             </p>
-                            <Button
-                                className="md:w-80 md:h-16 w-60 h-12"
-                                id="button"
-                                text="See my Work"
-                            />
+                            <button
+                                onClick={handleDownloadCV}
+                                className="md:w-80 md:h-16 w-60 h-12 mt-6 cta-wrapper pointer-events-auto"
+                            >
+                                <div className="cta-button group">
+                                    <div className="bg-circle" />
+                                    <p className="text">Download MY CV</p>
+                                    <div className="arrow-wrapper">
+                                        <img src="/images/arrow-down.svg" alt="arrow" />
+                                    </div>
+                                </div>
+                            </button>
                         </div>
                     </div>
                 </header>

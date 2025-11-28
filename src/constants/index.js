@@ -1,10 +1,10 @@
 const navLinks = [
   {
-    name: "Work",
+    name: "Projects",
     link: "#work",
   },
   {
-    name: "Experience",
+    name: "Education",
     link: "#experience",
   },
   {
@@ -17,15 +17,28 @@ const navLinks = [
   },
 ];
 
+const socialLinks = [
+  {
+    name: "GitHub",
+    url: "https://github.com/Sithum001",
+    icon: "github",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/sithum-gimhana",
+    icon: "linkedin",
+  },
+];
+
 const words = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Full stack developer", imgPath: "/images/ideas.svg" },
+  { text: "Tech enthusiast", imgPath: "/images/concepts.svg" },
+  { text: "Ui/Ux designer", imgPath: "/images/designs.svg" },
+  { text: "Passionate Coder", imgPath: "/images/code.svg" },
+  { text: "Full stack developer", imgPath: "/images/ideas.svg" },
+  { text: "Tech enthusiast", imgPath: "/images/concepts.svg" },
+  { text: "Ui/Ux designer", imgPath: "/images/designs.svg" },
+  { text: "Passionate Coder", imgPath: "/images/code.svg" },
 ];
 
 const counterItems = [
@@ -275,4 +288,5 @@ export {
   techStackIcons,
   techStackImgs,
   navLinks,
+  socialLinks,
 };
