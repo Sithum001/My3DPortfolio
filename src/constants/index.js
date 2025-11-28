@@ -28,6 +28,16 @@ const socialLinks = [
     url: "https://www.linkedin.com/in/sithum-gimhana",
     icon: "linkedin",
   },
+  {
+    name: "Facebook",
+    url: "https://facebook.com/sithum.gimhana",
+    icon: "facebook",
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com/sithum_gimhana",
+    icon: "instagram",
+  },
 ];
 
 const words = [
