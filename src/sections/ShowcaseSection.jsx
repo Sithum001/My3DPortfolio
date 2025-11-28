@@ -161,6 +161,16 @@ gsap.fromTo(
                     <div className='text-content'>
                         <h2>{projectsData[0].title}</h2>
                         <p>{projectsData[0].shortDesc}</p>
+                        <div className='flex flex-wrap gap-2 mt-4'>
+                            {projectsData[0].technologies.slice(0, 4).map((tech) => (
+                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                    {tech}
+                                </span>
+                            ))}
+                            {projectsData[0].technologies.length > 4 && (
+                                <span className='text-blue-300 text-xs py-1'>+{projectsData[0].technologies.length - 4} more</span>
+                            )}
+                        </div>
                         <p className='text-sm text-white-50 italic mt-4'>Click to see full details</p>
                     </div>
                 </div>
@@ -176,6 +186,16 @@ gsap.fromTo(
                         </div>
                         <h2>{projectsData[1].title}</h2>
                         <p className='text-white-50 mt-2'>{projectsData[1].shortDesc}</p>
+                        <div className='flex flex-wrap gap-2 mt-3'>
+                            {projectsData[1].technologies.slice(0, 3).map((tech) => (
+                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                    {tech}
+                                </span>
+                            ))}
+                            {projectsData[1].technologies.length > 3 && (
+                                <span className='text-blue-300 text-xs py-1'>+{projectsData[1].technologies.length - 3}</span>
+                            )}
+                        </div>
                         <p className='text-xs text-white-50 italic mt-2'>Click for details</p>
                     </div>
                     
@@ -189,6 +209,16 @@ gsap.fromTo(
                         </div>
                         <h2>{projectsData[2].title}</h2>
                         <p className='text-white-50 mt-2'>{projectsData[2].shortDesc}</p>
+                        <div className='flex flex-wrap gap-2 mt-3'>
+                            {projectsData[2].technologies.slice(0, 3).map((tech) => (
+                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                    {tech}
+                                </span>
+                            ))}
+                            {projectsData[2].technologies.length > 3 && (
+                                <span className='text-blue-300 text-xs py-1'>+{projectsData[2].technologies.length - 3}</span>
+                            )}
+                        </div>
                         <p className='text-xs text-white-50 italic mt-2'>Click for details</p>
                     </div>
                   </div>
@@ -209,6 +239,16 @@ gsap.fromTo(
                     <div className='p-6'>
                         <h2 className='text-xl font-bold mb-2'>{projectsData[3].title}</h2>
                         <p className='text-white-50 text-sm mb-3'>{projectsData[3].shortDesc}</p>
+                        <div className='flex flex-wrap gap-2 mb-3'>
+                            {projectsData[3].technologies.slice(0, 3).map((tech) => (
+                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                    {tech}
+                                </span>
+                            ))}
+                            {projectsData[3].technologies.length > 3 && (
+                                <span className='text-blue-300 text-xs py-1'>+{projectsData[3].technologies.length - 3}</span>
+                            )}
+                        </div>
                         <p className='text-xs text-white-50 italic'>Click for details</p>
                     </div>
                 </div>
@@ -225,6 +265,16 @@ gsap.fromTo(
                     <div className='p-6'>
                         <h2 className='text-xl font-bold mb-2'>{projectsData[4].title}</h2>
                         <p className='text-white-50 text-sm mb-3'>{projectsData[4].shortDesc}</p>
+                        <div className='flex flex-wrap gap-2 mb-3'>
+                            {projectsData[4].technologies.slice(0, 3).map((tech) => (
+                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                    {tech}
+                                </span>
+                            ))}
+                            {projectsData[4].technologies.length > 3 && (
+                                <span className='text-blue-300 text-xs py-1'>+{projectsData[4].technologies.length - 3}</span>
+                            )}
+                        </div>
                         <p className='text-xs text-white-50 italic'>Click for details</p>
                     </div>
                 </div>
@@ -241,6 +291,16 @@ gsap.fromTo(
                     <div className='p-6'>
                         <h2 className='text-xl font-bold mb-2'>{projectsData[5].title}</h2>
                         <p className='text-white-50 text-sm mb-3'>{projectsData[5].shortDesc}</p>
+                        <div className='flex flex-wrap gap-2 mb-3'>
+                            {projectsData[5].technologies.slice(0, 3).map((tech) => (
+                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                    {tech}
+                                </span>
+                            ))}
+                            {projectsData[5].technologies.length > 3 && (
+                                <span className='text-blue-300 text-xs py-1'>+{projectsData[5].technologies.length - 3}</span>
+                            )}
+                        </div>
                         <p className='text-xs text-white-50 italic'>Click for details</p>
                     </div>
                 </div>
@@ -257,6 +317,16 @@ gsap.fromTo(
                     <div className='p-6'>
                         <h2 className='text-xl font-bold mb-2'>{projectsData[6].title}</h2>
                         <p className='text-white-50 text-sm mb-3'>{projectsData[6].shortDesc}</p>
+                        <div className='flex flex-wrap gap-2 mb-3'>
+                            {projectsData[6].technologies.slice(0, 3).map((tech) => (
+                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                    {tech}
+                                </span>
+                            ))}
+                            {projectsData[6].technologies.length > 3 && (
+                                <span className='text-blue-300 text-xs py-1'>+{projectsData[6].technologies.length - 3}</span>
+                            )}
+                        </div>
                         <p className='text-xs text-white-50 italic'>Click for details</p>
                     </div>
                 </div>
