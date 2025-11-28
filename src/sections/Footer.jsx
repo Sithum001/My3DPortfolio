@@ -1,5 +1,5 @@
 import React from 'react';
-import { navLinks, socialLinks } from '../constants';
+import { navLinks, footerSocialLinks } from '../constants';
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaHeart } from 'react-icons/fa';
 
 const Footer = () => {
@@ -72,7 +72,7 @@ const Footer = () => {
               Follow me on social media for updates and behind-the-scenes content.
             </p>
             <div className="flex gap-5">
-              {socialLinks.map(({ name, url, icon }) => (
+              {footerSocialLinks.map(({ name, url, icon }) => (
                 <a
                   key={name}
                   href={url}

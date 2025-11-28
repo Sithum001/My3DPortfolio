@@ -28,6 +28,19 @@ const socialLinks = [
     url: "https://www.linkedin.com/in/sithum-gimhana",
     icon: "linkedin",
   },
+];
+
+const footerSocialLinks = [
+  {
+    name: "GitHub",
+    url: "https://github.com/Sithum001",
+    icon: "github",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/sithum-gimhana",
+    icon: "linkedin",
+  },
   {
     name: "Facebook",
     url: "https://facebook.com/sithum.gimhana",
@@ -299,4 +312,5 @@ export {
   techStackImgs,
   navLinks,
   socialLinks,
+  footerSocialLinks,
 };
