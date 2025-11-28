@@ -33,11 +33,11 @@ const socialLinks = [
 const words = [
   { text: "Full stack developer", imgPath: "/images/ideas.svg" },
   { text: "Tech enthusiast", imgPath: "/images/concepts.svg" },
-  { text: "Ui/Ux designer", imgPath: "/images/designs.svg" },
+  { text: "UI/UX designer", imgPath: "/images/designs.svg" },
   { text: "Passionate Coder", imgPath: "/images/code.svg" },
   { text: "Full stack developer", imgPath: "/images/ideas.svg" },
   { text: "Tech enthusiast", imgPath: "/images/concepts.svg" },
-  { text: "Ui/Ux designer", imgPath: "/images/designs.svg" },
+  { text: "UI/UX designer", imgPath: "/images/designs.svg" },
   { text: "Passionate Coder", imgPath: "/images/code.svg" },
 ];
 

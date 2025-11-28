@@ -23,12 +23,8 @@ const Hero = () => {
     }, []);
 
     const handleDownloadCV = () => {
-        const link = document.createElement('a');
-        link.href = '/CV.pdf';
-        link.download = 'Sithum_Gimhana_CV.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        // Open CV in new tab
+        window.open('/CV.pdf', '_blank');
     };
 
     return (
@@ -41,11 +37,11 @@ const Hero = () => {
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
                          
-                            <h1>Hi! I'am</h1>
+                            <h1>Hi! I am</h1>
                             <h1>Sithum Gimhana</h1>
                             
                                <h1>
-                                I'am a
+                                I am a
                                 <span className="slide">
                                     <span className="wrapper">
                                         {words.map((word) => (
@@ -88,7 +84,9 @@ const Hero = () => {
                     </div>
                 </figure>
             </div>
+        
             <AnimatedCounter />
+          
         </section>
     );
 };
