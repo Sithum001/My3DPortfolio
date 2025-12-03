@@ -178,7 +178,7 @@ gsap.fromTo(
                 {/*right */}
                   <div className='project-list-wrapper overflow-hidden' ref={project2Ref}>
                     <div 
-                        className='project cursor-pointer transition-all duration-300 hover:scale-[1.02]' 
+                        className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2' 
                         onClick={() => openProjectModal(2)}
                     >
                         <div className={`image-wrapper bg-[${projectsData[1].bgColor}]`}>
@@ -200,7 +200,7 @@ gsap.fromTo(
                     </div>
                     
                     <div 
-                        className='project cursor-pointer transition-all duration-300 hover:scale-[1.02]' 
+                        className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2' 
                         ref={project3Ref}
                         onClick={() => openProjectModal(3)}
                     >
@@ -229,7 +229,7 @@ gsap.fromTo(
             <div className='mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6'>
                 {/* Project 4 */}
                 <div 
-                    className='project cursor-pointer transition-all duration-300 hover:scale-[1.02] bg-black-200 rounded-2xl overflow-hidden'
+                    className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
                     ref={project4Ref}
                     onClick={() => openProjectModal(4)}
                 >
@@ -255,7 +255,7 @@ gsap.fromTo(
 
                 {/* Project 5 */}
                 <div 
-                    className='project cursor-pointer transition-all duration-300 hover:scale-[1.02] bg-black-200 rounded-2xl overflow-hidden'
+                    className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
                     ref={project5Ref}
                     onClick={() => openProjectModal(5)}
                 >
@@ -281,7 +281,7 @@ gsap.fromTo(
 
                 {/* Project 6 */}
                 <div 
-                    className='project cursor-pointer transition-all duration-300 hover:scale-[1.02] bg-black-200 rounded-2xl overflow-hidden'
+                    className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
                     ref={project6Ref}
                     onClick={() => openProjectModal(6)}
                 >
@@ -307,7 +307,7 @@ gsap.fromTo(
 
                 {/* Project 7 */}
                 <div 
-                    className='project cursor-pointer transition-all duration-300 hover:scale-[1.02] bg-black-200 rounded-2xl overflow-hidden'
+                    className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
                     ref={project7Ref}
                     onClick={() => openProjectModal(7)}
                 >
