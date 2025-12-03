@@ -17,11 +17,12 @@ const App = () => {
     <>
     <Navbar/>
     <Hero/>
+    <TechStack/>
     <ShowcaseSection/>
     <LogoSection/>
     <FeatureCards/>
     <ExperienceSection/>
-    <TechStack/>
+    
     <Testimonials/>
     <Contact/>
     <Footer/>

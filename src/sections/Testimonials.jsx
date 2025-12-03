@@ -5,35 +5,62 @@ import GlowCard from '../components/GlowCard'
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="flex-center section-padding">
+    <section id="experience" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
 
         <TitleHeader
-          title="What People Say About Me?"
-          sub="Client Feedback Highlights"
+          title="Leadership & Community Experience"
+          sub="Club & Organization Involvement"
         />
 
-        {/* Column Layout with Vertical Spacing */}
-        <div className="lg:columns-3 md:columns-2 columns-1 space-y-6 mt-16 break-inside-avoid-column">
+        {/* Grid with clear gaps */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 gap-x-12 mt-16 items-center">
+          
           {testimonials.map(({ imgPath, name, mentions, review }, i) => (
-            <GlowCard
-              key={i}
-              card={{ review }}
-              className="break-inside-avoid p-5"
+            <div 
+              key={i} 
+              className={`
+                duration-300 transition-transform 
+                ${i === 1 ? 'md:scale-110 relative z-10' : 'scale-100'} 
+              `}
             >
-              <div className="flex items-center gap-3">
-                <img
-                  src={imgPath}
-                  alt={name}
-                  className="w-14 h-14 rounded-full"
-                />
+              <GlowCard
+                
+                showStars={false}
+                className="break-inside-avoid"
+              >
+                {/* Header Container: Image Left, Text Right */}
+                <div className="flex items-start gap-4 mb-4">
+                  
+                  {/* Profile Picture (Top Left) */}
+                  <img
+                    src={imgPath}
+                    alt={name}
+                    className="w-18 h-18 rounded-full object-cover border-2 border-white/10 flex-shrink-0"
+                  />
 
-                <div>
-                  <p className="font-bold">{name}</p>
-                  <p className="text-white-50">{mentions}</p>
+                  {/* Name and Role */}
+                  <div className="flex flex-col">
+                    <h3 className="text-xl font-bold text-white tracking-wide">
+                      {name}
+                    </h3>
+                    <p className="text-sm text-white-50 mt-1">
+                      {mentions}
+                    </p>
+                  </div>
+                </div>  
+                <div className="text-white/50 text-lg mb-5">
+                                            { review }
                 </div>
-              </div>
-            </GlowCard>
+                
+
+                {/* 
+                   Note: The review text is passed in `card={{ review }}`.
+                   If the stars are still showing, go to your 
+                   'GlowCard.jsx' file and remove the star icons there.
+                */}
+              </GlowCard>
+            </div>
           ))}
         </div>
 

@@ -10,11 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ExperienceSection = () => {
     useGSAP(()=>{
-        gsap.utils.toArray('.timeline-card').forEach((card)=>{
+        gsap.utils.toArray('.timeline-card').forEach((card, index)=>{
              gsap.from(card, {
-                xPercent: -100,
+                xPercent: index % 2 === 0 ? -100 : 100,
                 opacity: 0,
-                transformOrigin:'left left',
                 duration:1,
                 ease:'power2.inOut',
                 scrollTrigger:{
@@ -24,82 +23,92 @@ const ExperienceSection = () => {
              })
         })
 
-        gsap.to('.timeline',{
-            transformOrigin:'bottom bottom',
-            ease:'power1.inOut',
-            scrollTrigger:{
-                trigger:'.timeline',
-                start:'top center',
-                end:'70% center',
-                onUpdate:(self)=>{
-                    gsap.to('.timeline',{
-                        scaleY:1 - self.progress,
-                    })
-                }
+        gsap.fromTo('.timeline',
+            {
+                scaleY: 0,
+                transformOrigin:'top center'
             },
-            
-        })
-            gsap.utils.toArray('.expText').forEach((text)=>{
-             gsap.from(text, {
-                xPercent: 0,
-                opacity: 0,
-                
-                duration:1,
-                ease:'power2.inOut',
+            {
+                scaleY: 1,
+                ease:'none',
                 scrollTrigger:{
-                    trigger:text ,
-                    start:'top 60%'
+                    trigger:'.experience-timeline-wrapper',
+                    start:'top center',
+                    end:'bottom center',
+                    scrub: 1
                 }
-             })
-        })
-        
-        
+            }
+        )
     },[]);
   return (
-   <section id='experience' className='w-full md:mt-40 mt-20 section-padding xl:px-0'>
+   <section id='education' className='w-full md:mt-40 mt-20 section-padding xl:px-0'>
     <div className='w-full h-full md:px-20 px-5'>
        <TitleHeader title="Professional work Experience " 
        sub="💼 My Career Overview"/> 
 
-       <div className='mt-32 relative '>
-        <div className='relative z-50 xl:space-y-32 space-y-10'>
-            {expCards.map((card,index)=>(
-                <div key={card.title} className="exp-card-wrapper">
-                   <div className='xl:w-2/6'>
-                   <GlowCard card={card} index={index} >
-                    <div>
-                        <img src={card.imgPath} alt={card.title} />
-                    </div>
-                   </GlowCard>
-                   </div>
-                   <div className='xl:w-4/6'>
-                   <div className='flex items-start'>
-                    <div className='timeline-wrapper'>
-                        <div className='timeline'/>
-                        <div className='gradient-line w-1 h-full'/>
-                    </div>
-                    <div className='expText flex xl:gap-20 md:gap-10 gap-5 relative z-20'>
-                        <div className='timeline-logo'>
-                            <img src={card.logoPath} alt="logo" />
-                        </div>
-                        <div>
-                            <h1 className='font-semibold'>{card.title}</h1>
-                            <p className='my-5 text-white-50'>
-                                📆{card.date}
-                            </p>
-                            <p className='text-{#839cb5} italic'>
-                                Responsibilities
-                            </p>
-                            <ul className='list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50'>
-                                {card.responsibilities.map((responsibility)=>(
-                                    <li key={responsibility} className='text-lg'>
+       <div className='experience-timeline-wrapper mt-32 relative min-h-screen'>
+        {/* Center timeline line */}
+        <div className='absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 hidden xl:block z-10'>
+            <div className='timeline w-full h-full bg-gradient-to-b from-blue-500 via-purple-500 to-transparent'/>
+        </div>
+
+        <div className='relative z-20 xl:space-y-24 space-y-10 pb-20'>
+            {expCards.map((card, index)=>(
+                <div key={card.title} className='timeline-card flex flex-col xl:flex-row items-center xl:items-stretch relative'>
+                  
+                   {/* Left side content (for even index) or empty space (for odd index) */}
+                   <div className={`xl:w-5/12 w-full ${index % 2 === 0 ? 'xl:block' : 'xl:block'} ${index % 2 === 1 ? 'xl:order-1' : 'xl:order-1'}`}>
+                        {index % 2 === 0 && (
+                            <div className='xl:pr-8'>
+                                <GlowCard showStars={false} showReview={false}>
+                                    <h1 className='font-semibold text-xl md:text-2xl mb-3'>{card.title}</h1>
+                                    <p className='my-4 text-white-50'>
+                                        📆 {card.date}
+                                    </p>
+                                    <p className='text-[#839cb5] italic mb-4'>
+                                        Responsibilities
+                                    </p>
+                                    <ul className='list-disc ml-5 mt-5 flex flex-col gap-3 text-white-50'>
+                                        {card.responsibilities.map((responsibility, idx)=>(
+                                            <li key={idx} className='text-base md:text-lg'>
                                                 {responsibility}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </GlowCard>
+                            </div>
+                        )}
                    </div>
+
+                   {/* Center logo on timeline */}
+                   <div className='xl:w-2/12 flex justify-center xl:order-2 my-4 xl:my-0'>
+                        <div className='timeline-logo relative z-30'>
+                            <img src={card.logoPath} alt="logo" className='w-full h-full object-contain' />
+                        </div>
+                   </div>
+
+                   {/* Right side content (for odd index) or empty space (for even index) */}
+                   <div className={`xl:w-5/12 w-full ${index % 2 === 1 ? 'xl:block' : 'xl:block'} xl:order-3`}>
+                        {index % 2 === 1 && (
+                            <div className='xl:pl-8'>
+                                <GlowCard showStars={false} showReview={false}>
+                                    <h1 className='font-semibold text-xl md:text-2xl mb-3'>{card.title}</h1>
+                                    <p className='my-4 text-white-50'>
+                                        📆 {card.date}
+                                    </p>
+                                    <p className='text-[#839cb5] italic mb-4'>
+                                        Responsibilities
+                                    </p>
+                                    <ul className='list-disc ml-5 mt-5 flex flex-col gap-3 text-white-50'>
+                                        {card.responsibilities.map((responsibility, idx)=>(
+                                            <li key={idx} className='text-base md:text-lg'>
+                                                {responsibility}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </GlowCard>
+                            </div>
+                        )}
                    </div>
                 </div>
             ))}

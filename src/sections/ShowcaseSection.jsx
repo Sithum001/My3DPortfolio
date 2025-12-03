@@ -140,7 +140,7 @@ gsap.fromTo(
 },[]);
   return (
     <>
-    <section id="work" className="section-padding">
+    <section id="project" className="section-padding">
        <TitleHeader 
           title="Featured Projects Showcase" 
           sub="🚀 Explore My Best Work"

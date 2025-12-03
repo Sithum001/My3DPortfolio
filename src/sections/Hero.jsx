@@ -78,11 +78,13 @@ const Hero = () => {
                         </div>
                     </div>
                 </header>
-                <figure>
+
+                 {/*<figure>
                     <div className="hero-3d-layout flex">
                         <HeroExperience />
                     </div>
-                </figure>
+                </figure>  */}
+                
             </div>
         
             <AnimatedCounter />
