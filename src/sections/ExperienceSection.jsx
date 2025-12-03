@@ -43,8 +43,8 @@ const ExperienceSection = () => {
   return (
    <section id='education' className='w-full md:mt-40 mt-20 section-padding xl:px-0'>
     <div className='w-full h-full md:px-20 px-5'>
-       <TitleHeader title="Professional work Experience " 
-       sub="💼 My Career Overview"/> 
+       <TitleHeader title="Education" 
+       sub="💼 The academic experiences that built my technical expertise"/> 
 
        <div className='experience-timeline-wrapper mt-32 relative min-h-screen'>
         {/* Center timeline line */}
@@ -61,10 +61,16 @@ const ExperienceSection = () => {
                         {index % 2 === 0 && (
                             <div className='xl:pr-8'>
                                 <GlowCard showStars={false} showReview={false}>
-                                    <h1 className='font-semibold text-xl md:text-2xl mb-3'>{card.title}</h1>
-                                    <p className='my-4 text-white-50'>
-                                        📆 {card.date}
-                                    </p>
+                                    {/* Logo, Title and Date in horizontal layout */}
+                                    <div className='flex items-start gap-4 mb-6'>
+                                        <img src={card.logoPath} alt={card.title} className='w-16 h-16 object-contain rounded-lg flex-shrink-0' />
+                                        <div className='flex flex-col'>
+                                            <h1 className='font-semibold text-xl md:text-2xl mb-2'>{card.title}</h1>
+                                            <p className='text-white-50 text-sm'>
+                                                📆 {card.date}
+                                            </p>
+                                        </div>
+                                    </div>
                                     <p className='text-[#839cb5] italic mb-4'>
                                         Responsibilities
                                     </p>
@@ -83,7 +89,7 @@ const ExperienceSection = () => {
                    {/* Center logo on timeline */}
                    <div className='xl:w-2/12 flex justify-center xl:order-2 my-4 xl:my-0'>
                         <div className='timeline-logo relative z-30'>
-                            <img src={card.logoPath} alt="logo" className='w-full h-full object-contain' />
+                            <img src={card.logoPath} alt="logo" className='w-30px h-30px object-contain' />
                         </div>
                    </div>
 
@@ -92,10 +98,16 @@ const ExperienceSection = () => {
                         {index % 2 === 1 && (
                             <div className='xl:pl-8'>
                                 <GlowCard showStars={false} showReview={false}>
-                                    <h1 className='font-semibold text-xl md:text-2xl mb-3'>{card.title}</h1>
-                                    <p className='my-4 text-white-50'>
-                                        📆 {card.date}
-                                    </p>
+                                    {/* Logo, Title and Date in horizontal layout */}
+                                    <div className='flex items-start gap-4 mb-6'>
+                                        <img src={card.logoPath} alt={card.title} className='w-16 h-16 object-contain rounded-lg flex-shrink-0' />
+                                        <div className='flex flex-col'>
+                                            <h1 className='font-semibold text-xl md:text-2xl mb-2'>{card.title}</h1>
+                                            <p className='text-white-50 text-sm'>
+                                                📆 {card.date}
+                                            </p>
+                                        </div>
+                                    </div>
                                     <p className='text-[#839cb5] italic mb-4'>
                                         Responsibilities
                                     </p>

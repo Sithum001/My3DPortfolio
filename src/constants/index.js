@@ -186,7 +186,7 @@ const expCards = [
   {
     review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
     imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
+    logoPath: "/images/uom.png",
     title: "Frontend Developer",
     date: "January 2023 - Present",
     responsibilities: [
@@ -198,7 +198,7 @@ const expCards = [
   {
     review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
     imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
+    logoPath: "/images/dmc.png",
     title: "Full Stack Developer",
     date: "June 2020 - December 2023",
     responsibilities: [
@@ -210,7 +210,7 @@ const expCards = [
   {
     review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
     imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
+    logoPath: "/images/dmc.png",
     title: "React Native Developer",
     date: "March 2019 - May 2020",
     responsibilities: [
