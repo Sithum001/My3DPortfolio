@@ -68,14 +68,15 @@ const ExperienceSection = () => {
                                         <img src={card.logoPath} alt={card.title} className='w-16 h-16 object-contain rounded-lg flex-shrink-0' />
                                         <div className='flex flex-col'>
                                             <h1 className='font-semibold text-xl md:text-2xl mb-2'>{card.title}</h1>
+                                            <p className='text-[#cfe2f5] text-xl italic mb-4'>
+                                                           {card.subtitle}
+                                             </p>
                                             <p className='text-white-50 text-sm'>
                                                 📆 {card.date}
                                             </p>
                                         </div>
                                     </div>
-                                    <p className='text-[#839cb5] italic mb-4'>
-                                        Responsibilities
-                                    </p>
+                                    
                                     <ul className='list-disc ml-5 mt-5 flex flex-col gap-3 text-white-50'>
                                         {card.responsibilities.map((responsibility, idx)=>(
                                             <li key={idx} className='text-base md:text-lg'>
@@ -105,14 +106,15 @@ const ExperienceSection = () => {
                                         <img src={card.logoPath} alt={card.title} className='w-16 h-16 object-contain rounded-lg flex-shrink-0' />
                                         <div className='flex flex-col'>
                                             <h1 className='font-semibold text-xl md:text-2xl mb-2'>{card.title}</h1>
+                                            <p className='text-[#cfe2f5] text-xl italic mb-4'>
+                                                           {card.subtitle}
+                                             </p>
                                             <p className='text-white-50 text-sm'>
                                                 📆 {card.date}
                                             </p>
                                         </div>
                                     </div>
-                                    <p className='text-[#839cb5] italic mb-4'>
-                                        Responsibilities
-                                    </p>
+                                    
                                     <ul className='list-disc ml-5 mt-5 flex flex-col gap-3 text-white-50'>
                                         {card.responsibilities.map((responsibility, idx)=>(
                                             <li key={idx} className='text-base md:text-lg'>

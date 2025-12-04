@@ -142,7 +142,7 @@ const Hero = () => {
                 </figure>
 
                 {/* Text Content and Button - Second on Mobile, Left side on Desktop */}
-                <header className="flex flex-col justify-center w-full xl:w-1/2 md:px-20 px-5 xl:pl-20 xl:pr-10 order-2 xl:order-1 mb-4">
+                <header className="flex flex-col justify-center w-full xl:w-1/2 md:px-20 px-5 xl:pl-20 xl:pr-10 order-2 xl:order-1 mt-8">
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
                          
