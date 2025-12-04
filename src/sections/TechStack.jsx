@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import TitleHeader from '../components/TitleHeader'
+import ParticleBackground from '../components/ParticleBackground'
 
 const frontendSkills = [
   { name: "HTML", logo: "/images/icons/html.png" },
@@ -91,8 +92,9 @@ export default function TechStack() {
   };
 
   return (
-    <section id="skills" className="py-24 bg-black text-white overflow-hidden px-[12vw] md:px-[7vw] lg:px-[20vw]">
-      <div className="text-center mb-8">
+    <section id="skills" className="relative py-24 bg-black text-white overflow-hidden px-[12vw] md:px-[7vw] lg:px-[20vw]">
+      <ParticleBackground className="z-0" />
+      <div className="relative z-10 text-center mb-8">
         <TitleHeader
           title="Skills & Expertise"
           sub="Technologies and tools I use to design, develop, and deliver impactful digital experiences."
@@ -100,7 +102,7 @@ export default function TechStack() {
         <div className="w-24 h-1 bg-blue-500 mx-auto mt-2 mb-4"></div>
       </div>
 
-      <div className="flex flex-wrap gap-2 lg:gap-5 py-10 justify-between">
+      <div className="relative z-10 flex flex-wrap gap-2 lg:gap-5 py-10 justify-between">
         <BigCard title="Frontend" skills={frontendSkills} />
         <BigCard title="Backend" skills={backendSkills} />
         <BigCard title="Languages" skills={languages} />

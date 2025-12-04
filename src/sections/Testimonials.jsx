@@ -2,11 +2,13 @@ import React from 'react'
 import TitleHeader from '../components/TitleHeader'
 import { testimonials } from '../constants'
 import GlowCard from '../components/GlowCard'
+import ParticleBackground from '../components/ParticleBackground'
 
 const Testimonials = () => {
   return (
-    <section id="experience" className="flex-center section-padding">
-      <div className="w-full h-full md:px-10 px-5">
+    <section id="experience" className="relative flex-center section-padding">
+      <ParticleBackground className="z-0" />
+      <div className="relative z-10 w-full h-full md:px-10 px-5">
 
         <TitleHeader
           title="Leadership & Community Experience"

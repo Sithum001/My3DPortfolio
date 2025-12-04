@@ -3,6 +3,7 @@ import {gsap} from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import TitleHeader from '../components/TitleHeader';
+import ParticleBackground from '../components/ParticleBackground';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,8 +17,6 @@ const project5Ref=useRef(null);
 const project6Ref=useRef(null);
 const project7Ref=useRef(null);
 const [selectedProject, setSelectedProject] = useState(null);
-
-const projects =[project1Ref.current,project2Ref.current,project3Ref.current,project4Ref.current,project5Ref.current,project6Ref.current,project7Ref.current];
 
 const projectsData = [
   {
@@ -103,16 +102,8 @@ const closeProjectModal = () => {
   document.body.style.overflow = 'auto'; // Restore scroll
 };
 
-const toggleProject = (projectId) => {
-  setExpandedProject(expandedProject === projectId ? null : projectId);
-};
-
-
-
 useGSAP(()=>{
 const projects =[project1Ref.current,project2Ref.current,project3Ref.current,project4Ref.current,project5Ref.current,project6Ref.current,project7Ref.current];
-
-
 
     projects.forEach((card,index)=>{
     gsap.fromTo(
@@ -138,9 +129,12 @@ gsap.fromTo(
     {opacity:1,duration:1.5}
 )
 },[]);
+
   return (
     <>
-    <section id="project" className="section-padding">
+    <section id="project" className="relative section-padding">
+       <ParticleBackground className="z-0" />
+       <div className="relative z-10">
        <TitleHeader 
           title="Featured Projects Showcase" 
           sub="🚀 Explore My Best Work"
@@ -149,34 +143,42 @@ gsap.fromTo(
         <div className='w-full'>
              
             <div className='showcaselayout'>
-                {/* left*/}
-                <div 
-                    className='first-project-wrapper cursor-pointer transition-all duration-300 hover:scale-[1.02]' 
-                    ref={project1Ref}
-                    onClick={() => openProjectModal(1)}
-                >
-                    <div className='image-wrapper'>
-                        <img src={projectsData[0].image} alt={projectsData[0].title} />
-                    </div>
-                    <div className='text-content'>
-                        <h2>{projectsData[0].title}</h2>
-                        <p>{projectsData[0].shortDesc}</p>
-                        <div className='flex flex-wrap gap-2 mt-4'>
-                            {projectsData[0].technologies.slice(0, 4).map((tech) => (
-                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
-                                    {tech}
-                                </span>
-                            ))}
-                            {projectsData[0].technologies.length > 4 && (
-                                <span className='text-blue-300 text-xs py-1'>+{projectsData[0].technologies.length - 4} more</span>
-                            )}
+                {/* 
+                   PROJECT 1 
+                   Ref is on wrapper; Hover/Click is on inner div.
+                */}
+                <div className='first-project-wrapper' ref={project1Ref}>
+                    <div 
+                        className='w-full h-full cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2' 
+                        onClick={() => openProjectModal(1)}
+                    >
+                        <div className='image-wrapper'>
+                            <img src={projectsData[0].image} alt={projectsData[0].title} />
                         </div>
-                        <p className='text-sm text-white-50 italic mt-4'>Click to see full details</p>
+                        <div className='text-content'>
+                            <h2>{projectsData[0].title}</h2>
+                            <p>{projectsData[0].shortDesc}</p>
+                            <div className='flex flex-wrap gap-2 mt-4'>
+                                {projectsData[0].technologies.slice(0, 4).map((tech) => (
+                                    <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                        {tech}
+                                    </span>
+                                ))}
+                                {projectsData[0].technologies.length > 4 && (
+                                    <span className='text-blue-300 text-xs py-1'>+{projectsData[0].technologies.length - 4} more</span>
+                                )}
+                            </div>
+                            <p className='text-sm text-white-50 italic mt-4'>Click to see full details</p>
+                        </div>
                     </div>
                 </div>
 
-                {/*right */}
-                  <div className='project-list-wrapper overflow-hidden' ref={project2Ref}>
+                {/* 
+                   RIGHT COLUMN (Projects 2 & 3) 
+                   Wrapper has project2Ref, so Project 2 (being first child) works by default.
+                   Project 3 needs a wrapper because it has its own Ref.
+                */}
+                  <div className='project-list-wrapper overflow-visible' ref={project2Ref}>
                     <div 
                         className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2' 
                         onClick={() => openProjectModal(2)}
@@ -199,27 +201,29 @@ gsap.fromTo(
                         <p className='text-xs text-white-50 italic mt-2'>Click for details</p>
                     </div>
                     
-                    <div 
-                        className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2' 
-                        ref={project3Ref}
-                        onClick={() => openProjectModal(3)}
-                    >
-                        <div className={`image-wrapper bg-[${projectsData[2].bgColor}]`}>
-                            <img src={projectsData[2].image} alt={projectsData[2].title} />
+                    {/* Project 3 - Wrapped */}
+                    <div ref={project3Ref}>
+                        <div 
+                            className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2' 
+                            onClick={() => openProjectModal(3)}
+                        >
+                            <div className={`image-wrapper bg-[${projectsData[2].bgColor}]`}>
+                                <img src={projectsData[2].image} alt={projectsData[2].title} />
+                            </div>
+                            <h2>{projectsData[2].title}</h2>
+                            <p className='text-white-50 mt-2'>{projectsData[2].shortDesc}</p>
+                            <div className='flex flex-wrap gap-2 mt-3'>
+                                {projectsData[2].technologies.slice(0, 3).map((tech) => (
+                                    <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                        {tech}
+                                    </span>
+                                ))}
+                                {projectsData[2].technologies.length > 3 && (
+                                    <span className='text-blue-300 text-xs py-1'>+{projectsData[2].technologies.length - 3}</span>
+                                )}
+                            </div>
+                            <p className='text-xs text-white-50 italic mt-2'>Click for details</p>
                         </div>
-                        <h2>{projectsData[2].title}</h2>
-                        <p className='text-white-50 mt-2'>{projectsData[2].shortDesc}</p>
-                        <div className='flex flex-wrap gap-2 mt-3'>
-                            {projectsData[2].technologies.slice(0, 3).map((tech) => (
-                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
-                                    {tech}
-                                </span>
-                            ))}
-                            {projectsData[2].technologies.length > 3 && (
-                                <span className='text-blue-300 text-xs py-1'>+{projectsData[2].technologies.length - 3}</span>
-                            )}
-                        </div>
-                        <p className='text-xs text-white-50 italic mt-2'>Click for details</p>
                     </div>
                   </div>
 
@@ -227,112 +231,117 @@ gsap.fromTo(
 
             {/* Additional Projects Grid */}
             <div className='mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6'>
-                {/* Project 4 */}
-                <div 
-                    className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
-                    ref={project4Ref}
-                    onClick={() => openProjectModal(4)}
-                >
-                    <div className='image-wrapper bg-[#e8f4ff]'>
-                        <img src={projectsData[3].image} alt={projectsData[3].title} className='w-full h-48 object-cover' />
-                    </div>
-                    <div className='p-6'>
-                        <h2 className='text-xl font-bold mb-2'>{projectsData[3].title}</h2>
-                        <p className='text-white-50 text-sm mb-3'>{projectsData[3].shortDesc}</p>
-                        <div className='flex flex-wrap gap-2 mb-3'>
-                            {projectsData[3].technologies.slice(0, 3).map((tech) => (
-                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
-                                    {tech}
-                                </span>
-                            ))}
-                            {projectsData[3].technologies.length > 3 && (
-                                <span className='text-blue-300 text-xs py-1'>+{projectsData[3].technologies.length - 3}</span>
-                            )}
+                {/* Project 4 - Wrapped */}
+                <div ref={project4Ref}>
+                    <div 
+                        className='project h-full cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
+                        onClick={() => openProjectModal(4)}
+                    >
+                        <div className='image-wrapper bg-[#e8f4ff]'>
+                            <img src={projectsData[3].image} alt={projectsData[3].title} className='w-full h-48 object-cover' />
                         </div>
-                        <p className='text-xs text-white-50 italic'>Click for details</p>
+                        <div className='p-6'>
+                            <h2 className='text-xl font-bold mb-2'>{projectsData[3].title}</h2>
+                            <p className='text-white-50 text-sm mb-3'>{projectsData[3].shortDesc}</p>
+                            <div className='flex flex-wrap gap-2 mb-3'>
+                                {projectsData[3].technologies.slice(0, 3).map((tech) => (
+                                    <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                        {tech}
+                                    </span>
+                                ))}
+                                {projectsData[3].technologies.length > 3 && (
+                                    <span className='text-blue-300 text-xs py-1'>+{projectsData[3].technologies.length - 3}</span>
+                                )}
+                            </div>
+                            <p className='text-xs text-white-50 italic'>Click for details</p>
+                        </div>
                     </div>
                 </div>
 
-                {/* Project 5 */}
-                <div 
-                    className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
-                    ref={project5Ref}
-                    onClick={() => openProjectModal(5)}
-                >
-                    <div className='image-wrapper bg-[#e8ffe8]'>
-                        <img src={projectsData[4].image} alt={projectsData[4].title} className='w-full h-48 object-cover' />
-                    </div>
-                    <div className='p-6'>
-                        <h2 className='text-xl font-bold mb-2'>{projectsData[4].title}</h2>
-                        <p className='text-white-50 text-sm mb-3'>{projectsData[4].shortDesc}</p>
-                        <div className='flex flex-wrap gap-2 mb-3'>
-                            {projectsData[4].technologies.slice(0, 3).map((tech) => (
-                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
-                                    {tech}
-                                </span>
-                            ))}
-                            {projectsData[4].technologies.length > 3 && (
-                                <span className='text-blue-300 text-xs py-1'>+{projectsData[4].technologies.length - 3}</span>
-                            )}
+                {/* Project 5 - Wrapped */}
+                <div ref={project5Ref}>
+                    <div 
+                        className='project h-full cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
+                        onClick={() => openProjectModal(5)}
+                    >
+                        <div className='image-wrapper bg-[#e8ffe8]'>
+                            <img src={projectsData[4].image} alt={projectsData[4].title} className='w-full h-48 object-cover' />
                         </div>
-                        <p className='text-xs text-white-50 italic'>Click for details</p>
+                        <div className='p-6'>
+                            <h2 className='text-xl font-bold mb-2'>{projectsData[4].title}</h2>
+                            <p className='text-white-50 text-sm mb-3'>{projectsData[4].shortDesc}</p>
+                            <div className='flex flex-wrap gap-2 mb-3'>
+                                {projectsData[4].technologies.slice(0, 3).map((tech) => (
+                                    <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                        {tech}
+                                    </span>
+                                ))}
+                                {projectsData[4].technologies.length > 3 && (
+                                    <span className='text-blue-300 text-xs py-1'>+{projectsData[4].technologies.length - 3}</span>
+                                )}
+                            </div>
+                            <p className='text-xs text-white-50 italic'>Click for details</p>
+                        </div>
                     </div>
                 </div>
 
-                {/* Project 6 */}
-                <div 
-                    className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
-                    ref={project6Ref}
-                    onClick={() => openProjectModal(6)}
-                >
-                    <div className='image-wrapper bg-[#fff0e8]'>
-                        <img src={projectsData[5].image} alt={projectsData[5].title} className='w-full h-48 object-cover' />
-                    </div>
-                    <div className='p-6'>
-                        <h2 className='text-xl font-bold mb-2'>{projectsData[5].title}</h2>
-                        <p className='text-white-50 text-sm mb-3'>{projectsData[5].shortDesc}</p>
-                        <div className='flex flex-wrap gap-2 mb-3'>
-                            {projectsData[5].technologies.slice(0, 3).map((tech) => (
-                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
-                                    {tech}
-                                </span>
-                            ))}
-                            {projectsData[5].technologies.length > 3 && (
-                                <span className='text-blue-300 text-xs py-1'>+{projectsData[5].technologies.length - 3}</span>
-                            )}
+                {/* Project 6 - Wrapped */}
+                <div ref={project6Ref}>
+                    <div 
+                        className='project h-full cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
+                        onClick={() => openProjectModal(6)}
+                    >
+                        <div className='image-wrapper bg-[#fff0e8]'>
+                            <img src={projectsData[5].image} alt={projectsData[5].title} className='w-full h-48 object-cover' />
                         </div>
-                        <p className='text-xs text-white-50 italic'>Click for details</p>
+                        <div className='p-6'>
+                            <h2 className='text-xl font-bold mb-2'>{projectsData[5].title}</h2>
+                            <p className='text-white-50 text-sm mb-3'>{projectsData[5].shortDesc}</p>
+                            <div className='flex flex-wrap gap-2 mb-3'>
+                                {projectsData[5].technologies.slice(0, 3).map((tech) => (
+                                    <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                        {tech}
+                                    </span>
+                                ))}
+                                {projectsData[5].technologies.length > 3 && (
+                                    <span className='text-blue-300 text-xs py-1'>+{projectsData[5].technologies.length - 3}</span>
+                                )}
+                            </div>
+                            <p className='text-xs text-white-50 italic'>Click for details</p>
+                        </div>
                     </div>
                 </div>
 
-                {/* Project 7 */}
-                <div 
-                    className='project cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
-                    ref={project7Ref}
-                    onClick={() => openProjectModal(7)}
-                >
-                    <div className='image-wrapper bg-[#ffe8f0]'>
-                        <img src={projectsData[6].image} alt={projectsData[6].title} className='w-full h-48 object-cover' />
-                    </div>
-                    <div className='p-6'>
-                        <h2 className='text-xl font-bold mb-2'>{projectsData[6].title}</h2>
-                        <p className='text-white-50 text-sm mb-3'>{projectsData[6].shortDesc}</p>
-                        <div className='flex flex-wrap gap-2 mb-3'>
-                            {projectsData[6].technologies.slice(0, 3).map((tech) => (
-                                <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
-                                    {tech}
-                                </span>
-                            ))}
-                            {projectsData[6].technologies.length > 3 && (
-                                <span className='text-blue-300 text-xs py-1'>+{projectsData[6].technologies.length - 3}</span>
-                            )}
+                {/* Project 7 - Wrapped */}
+                <div ref={project7Ref}>
+                    <div 
+                        className='project h-full cursor-pointer transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-2 bg-black-200 rounded-2xl overflow-hidden'
+                        onClick={() => openProjectModal(7)}
+                    >
+                        <div className='image-wrapper bg-[#ffe8f0]'>
+                            <img src={projectsData[6].image} alt={projectsData[6].title} className='w-full h-48 object-cover' />
                         </div>
-                        <p className='text-xs text-white-50 italic'>Click for details</p>
+                        <div className='p-6'>
+                            <h2 className='text-xl font-bold mb-2'>{projectsData[6].title}</h2>
+                            <p className='text-white-50 text-sm mb-3'>{projectsData[6].shortDesc}</p>
+                            <div className='flex flex-wrap gap-2 mb-3'>
+                                {projectsData[6].technologies.slice(0, 3).map((tech) => (
+                                    <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
+                                        {tech}
+                                    </span>
+                                ))}
+                                {projectsData[6].technologies.length > 3 && (
+                                    <span className='text-blue-300 text-xs py-1'>+{projectsData[6].technologies.length - 3}</span>
+                                )}
+                            </div>
+                            <p className='text-xs text-white-50 italic'>Click for details</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
       
+       </div>
        </div>
     </section>
 

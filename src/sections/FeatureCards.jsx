@@ -1,12 +1,14 @@
 import React from 'react'
 import { abilities } from '../constants'
 import { div } from 'three/tsl'
+import ParticleBackground from '../components/ParticleBackground'
 
 
 const FeatureCards = () => {
   return (
-    <div className='w-full padding-x-lg'>
-      <div className='mx-auto grid-3-cols'>
+    <div className='relative w-full padding-x-lg'>
+      <ParticleBackground className="z-0" />
+      <div className='relative z-10 mx-auto grid-3-cols'>
         {abilities.map(({imgPath,title,desc})=>(
           <div key={title} className='card-border rounded-xl p-8 flex flex-col gap-4'>
             <div className='size-14 flex items-center justify-center rounded-full'>

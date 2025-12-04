@@ -34,10 +34,10 @@ const AnimatedCounter = () => {
 
   return (
     <div ref={counterRef} id="counter" className="padding-x-lg xl:mt-0 mt-32">
-        <div className="mx-auto grid-4-cols">
+        <div className="mx-auto grid-4-cols gap-6">
             {counterItems.map((item, index)=>(
-                <div key={index} className="bg-zinc-900 rounded-lg p-10 flex flex-col justify-center">
-                <div className="counter-number text-white text-5xl font-bold mb-2">
+                <div key={index} className="bg-gradient-to-br from-zinc-800/90 to-zinc-900/90 backdrop-blur-md rounded-xl p-10 flex flex-col justify-center border-2 border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 shadow-2xl shadow-blue-500/30 hover:shadow-blue-400/50 hover:scale-105">
+                <div className="counter-number text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 text-6xl font-bold mb-3 drop-shadow-lg">
                   <CountUp 
                     suffix={item.suffix} 
                     end={item.value}
@@ -45,7 +45,7 @@ const AnimatedCounter = () => {
                     duration={2.5}
                   />
                 </div>
-                <div className="text-white-50 text-lg">{item.label}</div>
+                <div className="text-gray-200 text-lg font-semibold tracking-wide">{item.label}</div>
                 </div>
             ))}
         </div>
