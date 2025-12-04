@@ -240,23 +240,23 @@ const expLogos = [
 const testimonials = [
   {
     name: " University Catholic Students' Movement Colombo Region",
-    mentions: "@estherhoward",
+    mentions: "",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      "I serve as the Media Director for the University Catholic Students' Movement, Colombo Region, where I manage media content, social media communications, and visual storytelling to promote events and initiatives. This role has strengthened my skills in digital media, design, and effective communication.",
     imgPath: "/images/rcsm.jpg",
   },
   {
     name: "IoT and Embedded Systems Research Labs - Faculty of IT University of Moratuwa",
-    mentions: "@wadewarren",
+    mentions: "",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      "I am an active member of the Software and Electronics teams at the IoT and Embedded Systems Research Labs, Faculty of IT, University of Moratuwa. In this role, I contribute to both web and mobile application development as well as IoT projects, collaborating with team members to design and implement innovative solutions. This experience has strengthened my skills in full-stack development, embedded systems, and cross-disciplinary teamwork, while allowing me to apply theoretical knowledge to real-world technology projects.",
     imgPath: "/images/ieslab.jpg",
   },
   {
     name: "Catholic Students' Society - University of Moratuwa ",
-    mentions: "@guyhawkins",
+    mentions: "",
     review:
-      "Collaborating with Adrian was an aering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "I am a member of the Catholic Students' Society at the University of Moratuwa, actively participating in charity initiatives and public events such as Christmas carols. Through this role, I contribute to community service while developing teamwork, event management, and organizational skills.",
     imgPath: "/images/moracsm.png",
   }
 
