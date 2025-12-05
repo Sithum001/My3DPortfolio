@@ -42,7 +42,7 @@ const AnimatedCounter = () => {
                     suffix={item.suffix} 
                     end={item.value}
                     start={startCounting ? 0 : null}
-                    duration={2.5}
+                    duration={4.5}
                   />
                 </div>
                 <div className="text-gray-200 text-lg font-semibold tracking-wide">{item.label}</div>
