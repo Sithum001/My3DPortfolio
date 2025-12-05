@@ -146,13 +146,13 @@ const projects =[project1Ref.current,project2Ref.current,project3Ref.current,pro
 gsap.fromTo(
     sectionRef.current,
     {opacity:0},
-    {opacity:1,duration:1.5}
+    {opacity:1,duration:0.5}
 )
 },[]);
 
   return (
     <>
-    <section id="project" className="relative section-padding">
+    <section id="project" className="relative ">
        <ParticleBackground className="z-0" />
        <div className="relative z-10">
        <TitleHeader 
@@ -397,7 +397,7 @@ gsap.fromTo(
     {/* Project Detail Modal */}
     {selectedProject && (
       <div 
-        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fadeIn"
+        className="fixed inset-0 z-100 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fadeIn"
         onClick={closeProjectModal}
       >
         <div 
@@ -474,7 +474,7 @@ gsap.fromTo(
                   href={selectedProject.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-all flex items-center justify-center gap-2"
+                  className="flex-1 bg-linear-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-all flex items-center justify-center gap-2"
                 >
                   <FaGithub size={20} />
                   <span>View Code</span>

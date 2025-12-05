@@ -44,18 +44,18 @@ const Contact = () => {
   return (
     <section id="contact" className="relative flex-center section-padding">
       <ParticleBackground className="z-0" />
-      <div className="relative z-10 w-full h-full md:px-10 px-5">
+      <div className="relative z-10 w-full h-full md:px-6 px-4">
         <TitleHeader
-          title="Get in Touch – Let’s Connect"
-          sub="💬 Have questions or ideas? Let’s talk! 🚀"
+          title="Get in Touch – Let's Connect"
+          sub="💬 Have questions or ideas? Let's talk! 🚀"
         />
-        <div className="grid-12-cols mt-16">
+        <div className="grid-12-cols mt-10">
           <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-xl p-10">
+            <div className="flex-center card-border rounded-xl p-5 md:p-6 h-full">
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
-                className="w-full flex flex-col gap-7"
+                className="w-full flex flex-col gap-4"
               >
                 <div>
                   <label htmlFor="name">Your name</label>
@@ -91,7 +91,7 @@ const Contact = () => {
                     value={form.message}
                     onChange={handleChange}
                     placeholder="How can I help you?"
-                    rows="5"
+                    rows="3"
                     required
                   />
                 </div>
@@ -110,8 +110,8 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div className="xl:col-span-7 min-h-96">
-            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
+          <div className="xl:col-span-7">
+            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden min-h-[500px]">
               <ContactExperience />
             </div>
           </div>
