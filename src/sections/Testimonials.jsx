@@ -8,7 +8,7 @@ const Testimonials = () => {
   return (
     <section id="experience" className="relative flex-center section-padding">
       <ParticleBackground className="z-0" />
-      <div className="relative z-10 w-full h-full md:px-10 px-5">
+      <div className="relative z-10 w-full h-full md:px-8 px-5">
 
         <TitleHeader
           title="Leadership & Community Experience"
@@ -16,14 +16,14 @@ const Testimonials = () => {
         />
 
         {/* Grid with clear gaps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-10 gap-x-12 mt-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-8 mt-12 items-center">
           
           {testimonials.map(({ imgPath, name, mentions, review }, i) => (
             <div 
               key={i} 
               className={`
                 duration-300 transition-transform 
-                ${i === 1 ? 'md:scale-110 relative z-10' : 'scale-100'} 
+                ${i === 1 ? 'md:scale-105 relative z-10' : 'scale-100'} 
               `}
             >
               <GlowCard
@@ -32,26 +32,26 @@ const Testimonials = () => {
                 className="break-inside-avoid"
               >
                 {/* Header Container: Image Left, Text Right */}
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-start gap-3 mb-3">
                   
                   {/* Profile Picture (Top Left) */}
                   <img
                     src={imgPath}
                     alt={name}
-                    className="w-18 h-18 rounded-full object-cover border-2 border-white/10 flex-shrink-0"
+                    className="w-14 h-14 rounded-full object-cover border-2 border-white/10 shrink-0"
                   />
 
                   {/* Name and Role */}
                   <div className="flex flex-col">
-                    <h3 className="text-xl font-bold text-white tracking-wide">
+                    <h3 className="text-lg font-bold text-white tracking-wide">
                       {name}
                     </h3>
-                    <p className="text-sm text-white-50 mt-1">
+                    <p className="text-xs text-white-50 mt-1">
                       {mentions}
                     </p>
                   </div>
                 </div>  
-                <div className="text-white/50 text-lg mb-5">
+                <div className="text-white/50 text-base mb-4">
                                             { review }
                 </div>
                 

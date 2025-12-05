@@ -39,36 +39,36 @@ const ExperienceSection = () => {
                     scrub: 1
                 }
             }
-        )
+        );
     },[]);
   return (
-   <section id='education' className='relative w-full md:mt-40 mt-20 section-padding xl:px-0'>
+   <section id='education' className='relative w-full md:mt-32 mt-16 section-padding xl:px-0'>
     <ParticleBackground className="z-0" />
-    <div className='relative z-10 w-full h-full md:px-20 px-5'>
+    <div className='relative z-10 w-full h-full md:px-16 px-5'>
        <TitleHeader title="Education" 
        sub="💼 The academic experiences that built my technical expertise"/> 
 
-       <div className='experience-timeline-wrapper mt-32 relative min-h-screen'>
+       <div className='experience-timeline-wrapper mt-20 relative min-h-screen'>
         {/* Center timeline line */}
         <div className='absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 hidden xl:block z-10'>
-            <div className='timeline w-full h-full bg-gradient-to-b from-blue-500 via-purple-500 to-transparent'/>
+            <div className='timeline w-full h-full bg-linear-to-b from-blue-500 via-purple-500 to-transparent'/>
         </div>
 
-        <div className='relative z-20 xl:space-y-24 space-y-10 pb-20'>
+        <div className='relative z-20 xl:space-y-16 space-y-8 pb-16'>
             {expCards.map((card, index)=>(
                 <div key={card.title} className='timeline-card flex flex-col xl:flex-row items-center xl:items-stretch relative'>
                   
                    {/* Left side content (for even index) or empty space (for odd index) */}
                    <div className={`xl:w-5/12 w-full ${index % 2 === 0 ? 'xl:block' : 'xl:block'} ${index % 2 === 1 ? 'xl:order-1' : 'xl:order-1'}`}>
                         {index % 2 === 0 && (
-                            <div className='xl:pr-8'>
+                            <div className='xl:pr-6'>
                                 <GlowCard showStars={false} showReview={false}>
                                     {/* Logo, Title and Date in horizontal layout */}
-                                    <div className='flex items-start gap-4 mb-6'>
-                                        <img src={card.logoPath} alt={card.title} className='w-16 h-16 object-contain rounded-lg flex-shrink-0' />
+                                    <div className='flex items-start gap-3 mb-4'>
+                                        <img src={card.logoPath} alt={card.title} className='w-12 h-12 object-contain rounded-lg shrink-0' />
                                         <div className='flex flex-col'>
-                                            <h1 className='font-semibold text-xl md:text-2xl mb-2'>{card.title}</h1>
-                                            <p className='text-[#cfe2f5] text-xl italic mb-4'>
+                                            <h1 className='font-semibold text-lg md:text-xl mb-1'>{card.title}</h1>
+                                            <p className='text-[#cfe2f5] text-base md:text-lg italic mb-3'>
                                                            {card.subtitle}
                                              </p>
                                             <p className='text-white-50 text-sm'>
@@ -77,9 +77,9 @@ const ExperienceSection = () => {
                                         </div>
                                     </div>
                                     
-                                    <ul className='list-disc ml-5 mt-5 flex flex-col gap-3 text-white-50'>
+                                    <ul className='list-disc ml-4 mt-4 flex flex-col gap-2 text-white-50'>
                                         {card.responsibilities.map((responsibility, idx)=>(
-                                            <li key={idx} className='text-base md:text-lg'>
+                                            <li key={idx} className='text-sm md:text-base'>
                                                 {responsibility}
                                             </li>
                                         ))}
@@ -99,14 +99,14 @@ const ExperienceSection = () => {
                    {/* Right side content (for odd index) or empty space (for even index) */}
                    <div className={`xl:w-5/12 w-full ${index % 2 === 1 ? 'xl:block' : 'xl:block'} xl:order-3`}>
                         {index % 2 === 1 && (
-                            <div className='xl:pl-8'>
+                            <div className='xl:pl-6'>
                                 <GlowCard showStars={false} showReview={false}>
                                     {/* Logo, Title and Date in horizontal layout */}
-                                    <div className='flex items-start gap-4 mb-6'>
-                                        <img src={card.logoPath} alt={card.title} className='w-16 h-16 object-contain rounded-lg flex-shrink-0' />
+                                    <div className='flex items-start gap-3 mb-4'>
+                                        <img src={card.logoPath} alt={card.title} className='w-12 h-12 object-contain rounded-lg shrink-0' />
                                         <div className='flex flex-col'>
-                                            <h1 className='font-semibold text-xl md:text-2xl mb-2'>{card.title}</h1>
-                                            <p className='text-[#cfe2f5] text-xl italic mb-4'>
+                                            <h1 className='font-semibold text-lg md:text-xl mb-1'>{card.title}</h1>
+                                            <p className='text-[#cfe2f5] text-base md:text-lg italic mb-3'>
                                                            {card.subtitle}
                                              </p>
                                             <p className='text-white-50 text-sm'>
@@ -115,9 +115,9 @@ const ExperienceSection = () => {
                                         </div>
                                     </div>
                                     
-                                    <ul className='list-disc ml-5 mt-5 flex flex-col gap-3 text-white-50'>
+                                    <ul className='list-disc ml-4 mt-4 flex flex-col gap-2 text-white-50'>
                                         {card.responsibilities.map((responsibility, idx)=>(
-                                            <li key={idx} className='text-base md:text-lg'>
+                                            <li key={idx} className='text-sm md:text-base'>
                                                 {responsibility}
                                             </li>
                                         ))}

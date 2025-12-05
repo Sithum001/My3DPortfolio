@@ -117,12 +117,12 @@ const Hero = () => {
             
             <div className="hero-layout relative z-20">
                 {/* Profile Picture - First on Mobile, Right side on Desktop */}
-                <figure className="flex items-center justify-center mb-8 xl:mb-0 w-full xl:w-1/2 order-1 xl:order-2">
+                <figure className="flex items-center justify-center mb-6 xl:mb-0 w-full xl:w-1/2 order-1 xl:order-2">
                     <div 
                         ref={imageContainerRef}
                         onMouseMove={handleImageMouseMove}
                         onMouseLeave={handleImageMouseLeave}
-                        className="profile-card relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[420px] md:h-[420px] lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px] overflow-visible rounded-full transition-transform duration-300 ease-out cursor-pointer"
+                        className="profile-card relative w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] lg:w-[380px] lg:h-[380px] xl:w-[480px] xl:h-[480px] overflow-visible rounded-full transition-transform duration-300 ease-out cursor-pointer"
                         style={{ transformStyle: 'preserve-3d' }}
                     >
                         {/* GlowCard effect layer */}
@@ -135,15 +135,15 @@ const Hero = () => {
                             <img 
                                 src="/images/profile.png" 
                                 alt="Sithum Gimhana" 
-                                className="w-full h-[130%] object-cover object-[center_10%] shadow-2xl border-4 border-white/10 rounded-full"
+                                className="w-full h-[140%] object-cover object-[center_20%] shadow-2xl border-4 border-white/10 rounded-full"
                             />
                         </div>
                     </div>
                 </figure>
 
                 {/* Text Content and Button - Second on Mobile, Left side on Desktop */}
-                <header className="flex flex-col justify-center w-full xl:w-1/2 md:px-20 px-5 xl:pl-20 xl:pr-10 order-2 xl:order-1 mt-8">
-                    <div className="flex flex-col gap-7">
+                <header className="flex flex-col justify-center w-full xl:w-1/2 md:px-16 px-5 xl:pl-16 xl:pr-8 order-2 xl:order-1 mt-6">
+                    <div className="flex flex-col gap-5">
                         <div className="hero-text">
                          
                             <h1>Hi! I am</h1>
@@ -161,7 +161,7 @@ const Hero = () => {
                                                 <img
                                                     src={word.imgPath}
                                                     alt={word.text}
-                                                    className="xl:w-12 xl:h-12 md:w-10 md:h-10 w-7 h-7 md:p-2 p-1 rounded-full bg-white/50"
+                                                    className="xl:w-10 xl:h-10 md:w-8 md:h-8 w-6 h-6 md:p-2 p-1 rounded-full bg-white/50"
                                                 />
                                                 <span>{word.text}</span>
                                             </span>
@@ -169,13 +169,13 @@ const Hero = () => {
                                     </span>
                                 </span>
                             </h1>
-                            <p className="text-white-50 text-base md:text-xl relative z-10 pointer-events-none w-full md:w-[90%] mb-4">
+                            <p className="text-white-50 text-sm md:text-base lg:text-lg relative z-10 pointer-events-none w-full md:w-[90%] mb-3">
                             I am a dedicated Full-Stack Developer with a strong interest in building modern, user-friendly, and efficient digital solutions. Currently studying BSc. (Hons) in Information Technology at the University of Moratuwa, I focus on web and mobile development, UI/UX design, and problem-solving.
 I enjoy creating clean, scalable applications and continuously improving my skills by working on real-world projects and exploring new technologies.
                             </p>
                             <button
                                 onClick={handleDownloadCV}
-                                className="w-full sm:w-64 md:w-72 lg:w-80 h-12 sm:h-14 md:h-16 mt-4 md:mt-6 cta-wrapper pointer-events-auto"
+                                className="w-full sm:w-52 md:w-60 lg:w-64 h-10 sm:h-12 md:h-14 mt-3 md:mt-4 cta-wrapper pointer-events-auto"
                             >
                                 <div className="cta-button group">
                                     <div className="bg-circle" />
