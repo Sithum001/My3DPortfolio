@@ -170,7 +170,8 @@ const Hero = () => {
                                 </span>
                             </h1>
                             <p className="text-white-50 text-base md:text-xl relative z-10 pointer-events-none w-full md:w-[90%] mb-4">
-                               I have a strong background in web development, with a focus on creating dynamic and responsive user interfaces. My passion for coding drives me to continuously learn and adapt to new technologies, ensuring that I stay at the forefront of the industry and consistently deliver high-quality, user-centered digital solutions.
+                            I am a dedicated Full-Stack Developer with a strong interest in building modern, user-friendly, and efficient digital solutions. Currently studying BSc. (Hons) in Information Technology at the University of Moratuwa, I focus on web and mobile development, UI/UX design, and problem-solving.
+I enjoy creating clean, scalable applications and continuously improving my skills by working on real-world projects and exploring new technologies.
                             </p>
                             <button
                                 onClick={handleDownloadCV}
