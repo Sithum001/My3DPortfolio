@@ -30,7 +30,7 @@ const projectsData = [
     description: "Mindfull Connect is an online counseling and mental-wellness platform designed to bridge the gap between users and qualified counselors. The system provides a secure and user-friendly environment where individuals can create accounts, schedule sessions, and communicate with mental-health professionals. The platform includes OTP-based user authentication, a modern interface, and a responsive design to ensure accessibility and reliability. Built using Next.js and MongoDB, Mindfull Connect emphasizes performance, security, and an intuitive user experience.",
     technologies: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
     bgColor: "#ffefdb",
-    githubUrl: "https://github.com/yourusername/mindfull-connect"
+    githubUrl: "https://mindfull-connect.vercel.app/"
   },
   {
     id: 2,
@@ -52,7 +52,7 @@ const projectsData = [
     description: "The ERP System is a comprehensive management platform designed to simplify core business operations such as customer management, order processing, supplier handling, inventory tracking, and employee salary management. The platform also includes automated report generation to support data-driven decision-making. As the Front-End Developer, I built an intuitive and responsive interface using Next.js, ensuring smooth user interactions and efficient workflow navigation across all modules.",
     technologies: ["Next.js", "React", "Sanity CMS", "TailwindCSS", "TypeScript", "Server Actions"],
     bgColor: "#ffe7eb",
-    githubUrl: "https://github.com/yourusername/erp-system"
+    githubUrl: "https://github.com/Sithum001/silekta-frontend.git"
   },
   {
     id: 4,
@@ -63,7 +63,7 @@ const projectsData = [
     description: "GoMate is a feature-rich mobile travel companion built to streamline public transportation navigation across the UK. The app enables users to explore routes across multiple transport modes, check live schedules, view destination details, and save their favorite places and trips for quick access. With an intuitive interface and seamless dark mode support, GoMate enhances the user’s travel experience while ensuring reliability, accuracy, and convenience.",
     technologies: [" React Native", "Expo CLI", "Transport API UK"],
     bgColor: "#e8f4ff",
-    githubUrl: "https://github.com/yourusername/gomate-app"
+    githubUrl: "https://github.com/Sithum001/GoMate.git"
   },
   {
     id: 5,
@@ -74,7 +74,7 @@ const projectsData = [
     description: "The Point of Sales (POS) System is a complete retail management solution designed to simplify sales operations and inventory tracking. The system manages product cataloguing, billing, stock updates, and sales reporting, allowing businesses to handle daily transactions efficiently. As the Full Stack Developer, I designed and implemented both the user interface and backend logic to ensure smooth, accurate, and fast retail operations. The platform helps eliminate manual errors, improves record-keeping, and enhances overall business workflow.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap","PHP","MySQL"],
     bgColor: "#e8ffe8",
-    githubUrl: "https://github.com/yourusername/pos-system"
+    githubUrl: "https://github.com/Sithum001/POS-System-in-PHP.git"
   },
   {
     id: 6,
@@ -85,7 +85,7 @@ const projectsData = [
     description: "This portfolio serves as a professional digital identity, highlighting my expertise in full-stack development, UI/UX design, and modern web technologies. It features an interactive and responsive interface, detailed project showcases, skill categories, and contact channels. The design focuses on clarity, smooth animations, and a modern aesthetic to provide visitors with an engaging browsing experience.",
     technologies: ["React", "JavaScript", "Tailwind CSS", "GSAP","Framer Motion","Threejs"],
     bgColor: "#fff0e8",
-    githubUrl: "https://github.com/yourusername/portfolio"
+    githubUrl: "https://github.com/Sithum001/My3DPortfolio.git"
   },
   {
     id: 7,
@@ -96,7 +96,7 @@ const projectsData = [
     description: "A full-featured e-commerce platform built with modern web technologies. Features include product catalog, shopping cart, secure payment processing, order management, user authentication, and admin dashboard for managing products and orders.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe", "Redux"],
     bgColor: "#ffe8f0",
-    githubUrl: "https://github.com/yourusername/ecommerce-platform"
+    githubUrl: "https://github.com/Sithum001/cara-Ecommerce.git"
   },
   {
     id: 8,
