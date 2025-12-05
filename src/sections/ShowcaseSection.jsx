@@ -21,62 +21,62 @@ const [selectedProject, setSelectedProject] = useState(null);
 const projectsData = [
   {
     id: 1,
-    title: "On-Demand Rides Made Simple with a Powerful, User-Friendly App called Ryde",
-    shortDesc: "An app built with React Native, Expo, & TailwindCSS for a fast, user-friendly experience",
+    title: "Mindfull Connect - Online Counseling Platform",
+    shortDesc: "Mindfull Connect is a modern online counseling platform that connects users with professional counselors through a secure, user-friendly interface featuring OTP login, scheduling, and responsive design.",
     image: "/images/project1.png",
-    purpose: "To provide a seamless and intuitive ride-booking experience for users seeking on-demand transportation services.",
-    description: "Ryde is a full-featured mobile application that connects riders with drivers in real-time. The app features live tracking, secure payment integration, ride history, and an intuitive user interface designed for both riders and drivers.",
-    technologies: ["React Native", "Expo", "TailwindCSS", "Firebase", "Google Maps API", "Stripe"],
+    purpose: "The purpose of Mindfull Connect is to make mental-health support more accessible by providing a convenient digital platform for counseling. It aims to help users seek guidance comfortably and securely while enabling counselors to manage sessions efficiently. The platform focuses on reducing barriers to mental-health services through technology.",
+    description: "Mindfull Connect is an online counseling and mental-wellness platform designed to bridge the gap between users and qualified counselors. The system provides a secure and user-friendly environment where individuals can create accounts, schedule sessions, and communicate with mental-health professionals. The platform includes OTP-based user authentication, a modern interface, and a responsive design to ensure accessibility and reliability. Built using Next.js and MongoDB, Mindfull Connect emphasizes performance, security, and an intuitive user experience.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
     bgColor: "#ffefdb"
   },
   {
     id: 2,
-    title: "Library Management Platform",
-    shortDesc: "A comprehensive system for managing library resources and operations",
+    title: "Goods Distribution System for Garment Factories",
+    shortDesc: "An automated ESP32-based goods transportation system for garment factories that improves workflow efficiency through autonomous delivery, real-time notifications, and worker progress tracking.",
     image: "/images/project2.png",
-    purpose: "To streamline library operations including book cataloging, member management, and borrowing processes.",
-    description: "A modern library management system that digitizes the entire library workflow. Features include book inventory management, member registration, automated reminders for due dates, search functionality, and detailed analytics for library administrators.",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "TailwindCSS", "Shadcn UI"],
+    purpose: "The main purpose of this system is to streamline garment factory operations by automating the movement of goods, reducing worker strain, and improving overall workflow transparency. It aims to create a more efficient, safe, and humane manufacturing environment by combining automation with real-time monitoring and data-driven insights.",
+    description: "The Goods Distribution System for Garment Factories is an automated microcontroller-based solution designed to improve the efficiency and workflow of clothing transportation within production lines. The system autonomously transfers goods between workstations, ensuring timely delivery and reducing manual labor. It features real-time supervisor notifications, progress tracking for each worker, and intelligent navigation logic for precise movement. By combining ESP32-based control, custom PCB design, and IoT connectivity, the system enhances productivity while supporting a more organized and employee-friendly manufacturing environment.",
+    technologies: ["ESP32", "Custom PCBs (EasyEDA)", "3D Printed Components","C++", "Arduino IDE","Firebase Realtime Database"],
     bgColor: "#ffefdb"
   },
   {
     id: 3,
-    title: "YC Directory - A Startup Showcase App",
-    shortDesc: "Discover and showcase innovative startups",
+    title: "Enterprice resouce palaning system",
+    shortDesc: "A Next.js-based ERP platform for managing customers, orders, suppliers, inventory, and employee salaries with built-in report generation for better decision-making.",
     image: "/images/project3.png",
-    purpose: "To create a platform where entrepreneurs can showcase their startups and investors can discover promising ventures.",
-    description: "YC Directory is a comprehensive startup showcase platform inspired by Y Combinator. It allows founders to present their startups with detailed information, pitch decks, and metrics. Investors can filter, search, and connect with startups based on various criteria including industry, funding stage, and location.",
+    purpose: "TThe purpose of this ERP system is to centralize and streamline daily business operations, reduce manual workload, and improve accuracy in organizational processes. By integrating key business functions into a single platform, the system helps companies manage resources efficiently and make informed operational decisions.",
+    description: "The ERP System is a comprehensive management platform designed to simplify core business operations such as customer management, order processing, supplier handling, inventory tracking, and employee salary management. The platform also includes automated report generation to support data-driven decision-making. As the Front-End Developer, I built an intuitive and responsive interface using Next.js, ensuring smooth user interactions and efficient workflow navigation across all modules.",
     technologies: ["Next.js", "React", "Sanity CMS", "TailwindCSS", "TypeScript", "Server Actions"],
     bgColor: "#ffe7eb"
   },
   {
     id: 4,
-    title: "Resource Hub",
-    shortDesc: "A comprehensive web application designed for efficient management of organizational resources",
+    title: "GoMate - Multi-Modal Public Transport Application",
+    shortDesc: "A multi-modal public transport mobile app that allows users to search routes, view real-time schedules, and plan trips across bus, train, metro, tram, and ferry services.",
     image: "/images/project1.png",
-    purpose: "To centralize and streamline resource management for organizations, improving efficiency and collaboration.",
-    description: "Resource Hub is a comprehensive web application designed for efficient management of organizational resources. It features real-time dashboards, resource allocation, team collaboration tools, and advanced analytics to help organizations optimize their resource utilization and project management.",
-    technologies: ["HTML", "JWT", "MUI", "Tailwind CSS", "JavaScript", "React JS", "MySQL", "Ballerina"],
+    purpose: "The purpose of GoMate is to simplify public transport usage by integrating multiple travel modes into one unified platform. It aims to help commuters and travelers easily discover optimal routes, stay updated with real-time transportation data, and navigate efficiently without switching between multiple apps or websites.",
+    description: "GoMate is a feature-rich mobile travel companion built to streamline public transportation navigation across the UK. The app enables users to explore routes across multiple transport modes, check live schedules, view destination details, and save their favorite places and trips for quick access. With an intuitive interface and seamless dark mode support, GoMate enhances the user’s travel experience while ensuring reliability, accuracy, and convenience.",
+    technologies: [" React Native", "Expo CLI", "Transport API UK"],
     bgColor: "#e8f4ff"
   },
   {
     id: 5,
-    title: "Finly Money Manager",
-    shortDesc: "A comprehensive personal finance management application",
+    title: " Point of Sales (POS) System",
+    shortDesc: "A full-stack POS system for retail businesses that manages sales, billing, inventory, and reports to improve transaction speed and operational efficiency.",
     image: "/images/project2.png",
-    purpose: "To help users track expenses, manage budgets, and achieve financial goals through smart money management.",
-    description: "Finly Money Manager is a comprehensive personal finance management application that helps users track expenses, set budgets, and visualize spending patterns. Features include transaction categorization, budget alerts, financial reports, and goal tracking to promote better financial habits.",
-    technologies: ["React JS", "Spring Boot", "MySQL", "Render", "Netlify"],
+    purpose: "The purpose of this POS system is to provide retail businesses with a reliable and user-friendly tool for managing sales, inventory, and reports. It aims to enhance transaction speed, reduce manual workload, and offer accurate, real-time insights into product movement and business performance.",
+    description: "The Point of Sales (POS) System is a complete retail management solution designed to simplify sales operations and inventory tracking. The system manages product cataloguing, billing, stock updates, and sales reporting, allowing businesses to handle daily transactions efficiently. As the Full Stack Developer, I designed and implemented both the user interface and backend logic to ensure smooth, accurate, and fast retail operations. The platform helps eliminate manual errors, improves record-keeping, and enhances overall business workflow.",
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap","PHP","MySQL"],
     bgColor: "#e8ffe8"
   },
   {
     id: 6,
-    title: "LUIGI - Pet Robot Car",
-    shortDesc: "A smart, AI-powered robotic pet designed for fun, companionship, and emotional interaction",
+    title: "Portfolio",
+    shortDesc: "A personal portfolio showcasing my skills, projects, and experience as a Full-Stack Developer and UI/UX Engineer.",
     image: "/images/project3.png",
-    purpose: "To create an interactive robotic companion that provides entertainment and emotional support through AI-powered interactions.",
-    description: "LUIGI is a smart, AI-powered robotic pet designed for fun, companionship, and emotional interaction. It can recognize voice commands, navigate autonomously, interact with its environment, and respond to user emotions. Perfect for tech enthusiasts and anyone looking for a unique robotic companion.",
-    technologies: ["Python", "Tkinter", "Raspberry Pi", "ESP32"],
+    purpose: "The purpose of the portfolio is to present my technical abilities, showcase real-world projects, and provide potential clients, employers, or collaborators with an organized overview of my professional capabilities. It acts as a central hub to demonstrate my coding style, creativity, and problem-solving approach while building trust and credibility.",
+    description: "This portfolio serves as a professional digital identity, highlighting my expertise in full-stack development, UI/UX design, and modern web technologies. It features an interactive and responsive interface, detailed project showcases, skill categories, and contact channels. The design focuses on clarity, smooth animations, and a modern aesthetic to provide visitors with an engaging browsing experience.",
+    technologies: ["React", "JavaScript", "Tailwind CSS", "GSAP","Framer Motion","Threejs"],
     bgColor: "#fff0e8"
   },
   {
@@ -156,8 +156,8 @@ gsap.fromTo(
                             <img src={projectsData[0].image} alt={projectsData[0].title} />
                         </div>
                         <div className='text-content'>
-                            <h2>{projectsData[0].title}</h2>
-                            <p>{projectsData[0].shortDesc}</p>
+                            <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-white'>{projectsData[0].title}</h2>
+                            <p className='text-white-50 mt-2'>{projectsData[0].shortDesc}</p>
                             <div className='flex flex-wrap gap-2 mt-4'>
                                 {projectsData[0].technologies.slice(0, 4).map((tech) => (
                                     <span key={tech} className='bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs'>
