@@ -45,7 +45,7 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Enterprice resouce palaning system",
+    title: "Enterprise Resource Planning system",
     shortDesc: "A Next.js-based ERP platform for managing customers, orders, suppliers, inventory, and employee salaries with built-in report generation for better decision-making.",
     image: "/images/project3.png",
     purpose: "TThe purpose of this ERP system is to centralize and streamline daily business operations, reduce manual workload, and improve accuracy in organizational processes. By integrating key business functions into a single platform, the system helps companies manage resources efficiently and make informed operational decisions.",
@@ -94,7 +94,7 @@ const projectsData = [
     image: "/images/project7.png",
     purpose: "To provide a complete e-commerce solution with product management, secure payments, and order tracking.",
     description: "A full-featured e-commerce platform built with modern web technologies. Features include product catalog, shopping cart, secure payment processing, order management, user authentication, and admin dashboard for managing products and orders.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe", "Redux"],
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap","PHP","MySQL"],
     bgColor: "#ffe8f0",
     githubUrl: "https://github.com/Sithum001/cara-Ecommerce.git"
   },
@@ -135,7 +135,7 @@ const projects =[project1Ref.current,project2Ref.current,project3Ref.current,pro
             y:0,
             opacity:1,
             duration:1,
-            delay:0.6 *(index + 1),
+            delay:0.5 *(index + 1),
             scrollTrigger:{
                 trigger:card,
                 start:'top bottom-=100',
